@@ -37,6 +37,20 @@ module.exports = {
 }
 ```
 
+## A sample schema object
+```js
+const { Schema, model } = require("mongoose");
+
+const exampleSchema = new Schema({
+    test: {
+        type: String,
+        required: true
+    }
+});
+
+module.exports = { ExampleModel: model("example", exampleSchema) };
+```
+
 ## License
 [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
