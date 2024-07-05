@@ -22,13 +22,13 @@ module.exports = {
         let transporter = nodemailer.createTransport({
             service: "Gmail",
             auth: {
-                user: "slenzycode@gmail.com",
+                user: process.env.MAIL,
                 pass: process.env.PASS
             }
         });
 
         let mailOptions = {
-            from: "slenzycode@gmail.com",
+            from: process.env.MAIL,
             to: email,
             subject: "Confirm Password",
             html: `
